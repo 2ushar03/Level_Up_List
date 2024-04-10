@@ -6,5 +6,5 @@ It is responsive website.
 We will enjoy it for jotting down important points.
 
 To start:
-npm install //To download all dependencies
+npm install //To install all the dependencies
 npm run dev //To run the development 
