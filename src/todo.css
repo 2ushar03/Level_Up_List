@@ -1,0 +1,10 @@
+.text{
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.btn{
+    float: right;
+    margin-top: -40px;
+    background-image: url(https://i.pinimg.com/originals/20/7a/96/207a961ad80e2570eb15c4930a0dbfa2.jpg);
+}
