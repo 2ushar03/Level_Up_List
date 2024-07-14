@@ -10,7 +10,6 @@ app.use(express.json())
 
 mongoose.connect(process.env.MONGO_URL)
 const PORT = process.env.PORT;
-console.log(PORT)
 
 app.get("/",(req,res)=>{
     todomodel.find()
