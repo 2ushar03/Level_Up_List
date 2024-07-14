@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express")
 const mongoose = require('mongoose')
 const cors = require("cors")
@@ -7,7 +8,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb://localhost:27017/test')
+mongoose.connect(process.env.MONGO_URL)
+const PORT = process.env.PORT;
+console.log(PORT)
 
 app.get("/",(req,res)=>{
     todomodel.find()
@@ -29,7 +32,6 @@ app.delete('/:id',(req,res)=>{
     .then(result=>res.json(result))
     .catch(err=>res.json(err))
 })
-
-app.listen(3000,()=>{
-    console.log("SERVER STARTED")
+app.listen(PORT,()=>{
+    console.log("SERVER STARTED",PORT)
 })
