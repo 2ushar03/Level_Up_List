@@ -5,7 +5,7 @@ import axios from "axios"
 function todoitm(props){
     
     function handleDelete(id){
-        axios.delete('http://localhost:3000/'+id)
+        axios.delete('https://level-up-list-back.onrender.com'+id)
         .then(result=>{
             location.reload();
         })
