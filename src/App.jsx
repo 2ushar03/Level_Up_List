@@ -14,13 +14,13 @@ function App() {
 
 
   const handleadd=()=>{
-    axios.post('http://localhost:3000',{name:name})
+    axios.post('https://level-up-list-back.onrender.com',{name:name})
     .then(result=>(console.log(result)),(location.reload()))
     .catch(err=>console.log(err)),
   []}
 
     useEffect(()=>{
-      axios.get('http://localhost:3000/')
+      axios.get('https://level-up-list-back.onrender.com')
       .then(result=>setItemname(result.data))
       .catch(err=>console.log(err))
     },[])
